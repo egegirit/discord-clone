@@ -1,7 +1,13 @@
 {
-  "editor.fontSize": 17,
-  "search.useIgnoreFiles": false,
-  "explorer.excludeGitIgnore": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.tabWidth": 4
+    "editor.fontSize": 17,
+    "search.useIgnoreFiles": true,
+    "explorer.excludeGitIgnore": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "search.useParentIgnoreFiles": true,
+    "search.quickOpen.history.filterSortOrder": "default",
+    "search.showLineNumbers": false
 }

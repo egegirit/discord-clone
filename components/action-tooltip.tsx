@@ -2,12 +2,7 @@
 
 import React from "react";
 
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface ActionTooltipProps {
     label: string;
@@ -16,20 +11,13 @@ interface ActionTooltipProps {
     align?: "start" | "center" | "end";
 }
 
-export const ActionTooltip = ({
-    children,
-    label,
-    side,
-    align,
-}: ActionTooltipProps) => {
+export const ActionTooltip = ({ children, label, side, align }: ActionTooltipProps) => {
     return (
         <TooltipProvider>
             <Tooltip delayDuration={50}>
                 <TooltipTrigger asChild>{children}</TooltipTrigger>
                 <TooltipContent side={side} align={align}>
-                    <p className="font-semibold text-sm capitalize">
-                        {label.toLocaleLowerCase()}
-                    </p>
+                    <p className="font-semibold text-sm capitalize">{label.toLocaleLowerCase()}</p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>

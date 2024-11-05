@@ -4,15 +4,16 @@ import { db } from "@/lib/db";
 import { RedirectToSignIn } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-const ServerIdLayout = async ({
-    children,
-    params,
-}: {
+const ServerIdLayout = async (props: {
     children: React.ReactNode;
-    params: {
+    params: Promise<{
         serverId: string;
-    };
+    }>;
 }) => {
+    const params = await props.params;
+
+    const { children } = props;
+
     const profile = await currentProfile();
 
     if (!profile) {
